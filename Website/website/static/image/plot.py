@@ -15,7 +15,7 @@ pd.set_option('display.max_rows', None)
 
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', 2000)
-from statsmodels.tsa.seasonal import seasonal_decompose
+#from statsmodels.tsa.seasonal import seasonal_decompose
 
 
 def ELOP(url):
@@ -29,7 +29,8 @@ def ELOP(url):
     sns.set(font_scale=1.5, rc={'axes.facecolor':'pink','figure.facecolor':'gray'})
     sns.lineplot(x=X, y= Y, data=df, )
     sns.set(style='dark',)
-    
+    plt.savefig('ELP.png')
+    return df    
     
 
 ELOP("https://www.ine.gub.uy/c/document_library/get_file?uuid=0c0fbfd5-d4ab-4414-96cd-dbff821e4b00&groupId=10181")
